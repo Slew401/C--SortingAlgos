@@ -10,8 +10,8 @@ public class BubbleSort
         BubSort(arr);
         //List<int> list = new() { 1,3,5,7,9};
         //List<int> list2 = new() { 2,4,6,8,10 };
-        List<int> list = new() { 1, 2, 3, 4, 5 };
-        List<int> list2 = new() { 6, 7, 8, 9, 10 };
+        List<int> list = new() { 1, 2, 3, 4, 5 ,6 ,7};
+        List<int> list2 = new() { 6, 7, 8, 9, 10 ,12,15};
 
         var mergedList = MergeMethod(list, list2);
         foreach (int i in arr)
@@ -54,10 +54,10 @@ public class BubbleSort
     public static void BubSort(int[] array)
     {
         int temp = 0;
-        bool sorted = false;
+        bool swapped = false;
         for(int i = 0; i < array.Length; i++)
         {
-            sorted = false;
+            swapped = false;
             for(int j = i + 1; j < array.Length; j++)
             {
                 if(array[i] > array[j])
@@ -65,10 +65,10 @@ public class BubbleSort
                     temp = array[i];
                     array[i] = array[j];
                     array[j] = temp;
-                    sorted = true;
+                    swapped = true;
                 }
             }
-            if (sorted == false) return;
+            if (swapped == false) return;
         }
     }
 
